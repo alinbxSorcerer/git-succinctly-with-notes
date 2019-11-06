@@ -1,0 +1,51 @@
+#+TITLE: 0.Introduction
+
+** 0.Introduction
+
+Git is an open-source version control system known for its speed, stability, and
+distributed collaboration model. Originally created in 2006 to manage the entire
+Linux kernel, Git now boasts a comprehensive feature set, an active
+development team, and several free hosting communities.
+
+Git was designed from the ground up, paying little attention to the existing
+standards of centralized versioning systems. So, if you’re coming from an SVN or
+CVS background, try to forget everything you know about version control before
+reading this guide.
+
+Distributed software development is fundamentally different from centralized
+version control systems. Instead of storing file information in a single central
+repository, Git gives every developer a full copy of the repository. To facilitate
+collaboration, Git lets each of these repositories share changes with any other
+repository.
+
+[[../images/processes.org_20190902_110520.png]]
+
+Having a complete repository on your local machine has a far-reaching impact on
+the development cycle....
+
+*Faster Commands*
+
+First, a local copy of the repository means that almost all version control actions
+are much faster. Instead of communicating with the central server over a network
+connection, Git actions are performed on the local machine. This also means you
+can work offline without changing your workflow.
+
+*Stability*
+
+Since each collaborator essentially has a backup of the whole project, the risk of
+a server crash, a corrupted repository, or any other type of data loss is much
+lower than that of centralized systems that rely on a single point-of-access.
+
+*Isolated Environments*
+
+Every copy of a Git repository, whether local or remote, retains the full history of
+a project. Having a complete, isolated development environment gives each user
+the freedom to experiment with new additions before polishing them up into
+clean, publishable commits.
+
+*Efficient Merging*
+
+A complete history for each developer also means a divergent history for each
+developer. As soon as you make a single local commit, you’re out of sync with
+everyone else on the project. To cope with this massive amount of branching, Git
+became very good at merging divergent lines of development.

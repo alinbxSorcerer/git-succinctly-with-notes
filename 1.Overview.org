@@ -1,0 +1,60 @@
+#+TITLE: 1.Overview
+
+* 1.Overview
+Each Git repository contains 4 components:
+
+1. The working directory
+2. The staging area
+3. Committed history
+4. Development branches
+#+attr_html: :width 1000
+[[../images/processes.org_20190902_112640.png]]
+
+
+
+Everything from recording commits to distributed collaboration revolves around
+these core objects.
+
+** The Working Directory
+
+The working directory is where you actually edit files, compile code, and
+otherwise develop your project. For all intents and purposes, you can treat the
+working directory as a normal folder. Except, you now have access to all sorts of
+commands that can record, alter, and transfer the contents of that folder.
+
+[[../images/processes.org_20190902_113246.png]]
+
+** The Staging Area
+
+The staging area is an intermediary between the working directory and the
+project history. Instead of forcing you to commit all of your changes at once, Git
+lets you group them into related changesets. Staged changes are not yet part of
+the project history.
+
+[[../images/processes.org_20190902_113550.png]]
+
+** Committed History
+
+Once you’ve configured your changes in the staging area, you can commit it to
+the project history where it will remain as a “safe” revision. Commits are “safe” in
+the sense that Git will never change them on its own, although it is possible for
+you to manually rewrite project history.
+
+** Development Branches
+
+So far, we’re still only able to create a linear project history, adding one commit
+on top of another. Branches make it possible to develop multiple unrelated
+features in parallel by forking the project history.
+
+[[../images/processes.org_20190902_113809.png]]
+
+
+Git branches are not like the branches of centralized version control systems.
+They are cheap to make, simple to merge, and easy to share, so Git-based
+developers use branches for everything—from long-running features with several
+contributors to 5-minute fixes. Many developers only work in dedicated topic
+branches, leaving the main history branch for public releases.
+
+
+# git push --set-upstream origin develop
+# 全部更改到develop上工作.

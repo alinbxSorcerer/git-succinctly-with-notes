@@ -1,0 +1,70 @@
+#+TITLE: 2.Get_Started
+
+* 2.Getting Started, Installation, Configuration
+** Installation
+** Configuration
+
+Git comes with a long list of configuration options covering everything from your
+name to your favorite merge tool. You can set options with the git config
+command, or by manually editing a file called =.gitconfig= in your home
+directory. Some of the most common options are presented below.
+*** User Info
+
+The first thing you’ll want to do with any new Git installation is introduce yourself.
+Git records this information with your commits, and third-party services like
+GitHub use it to identify you.
+#+BEGIN_SRC shell
+git config --global user.name "John Smith"
+git config --global user.email john@example.com
+#+END_SRC
+
+The --global flag records options in ~/.gitconfig, making it the default for
+all new repositories. Omitting it lets you specify options on a per-repository basis.
+*** Editor
+
+Git’s command-line implementation relies on a text editor for most of its input.
+You can force Git to use your editor-of-choice with the core.editor option:
+
+#+BEGIN_SRC shell
+git config --global core.editor gvim
+#+END_SRC
+
+*** Ali ases
+By default, Git doesn’t come with any shortcuts, but you can add your own by
+aliasing commands. If you’re coming from an SVN background, you’ll appreciate
+the following bindings:
+#+BEGIN_SRC shell
+git config  --globa  alias.st  status
+git
+ config
+ --global
+ alias.ci
+ commit
+git
+ config
+ --global
+ alias.co
+ checkout
+git
+ config
+ --global
+ alias.br
+ branch
+#+END_SRC
+Learn more by running the git help config in your Git Bash prompt.
+
+** Cloning Repositories
+As an alternative to git init, you can clone an existing Git repository using the
+following command:
+#+BEGIN_SRC shell
+git clone ssh://<user>@<host>/path/to/repo.git
+#+END_SRC
+This logs into the <host> machine using SSH and downloads the repo.git
+project. This is a complete copy, not just a link to the server’s repository. You
+have your own history, working directory, staging area, and branch structure, and
+no one will see any changes you make until you push them back to a public
+repository.
+
+# 好的教材就是概念清晰.
+
+
